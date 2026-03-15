@@ -29,9 +29,14 @@ chmod +x "$SCRIPT_DIR/airootfs/usr/local/bin/supminer-welcome"
 chmod +x "$SCRIPT_DIR/airootfs/etc/profile.d/welcome.sh"
 
 echo "[3/3] Running mkarchiso..."
-mkdir -p "$OUT_DIR" "$WORK_DIR"
-# Clean work dir to avoid stale cache issues
-rm -rf "$WORK_DIR"
+mkdir -p "$OUT_DIR"
+# Unmount any leftover mounts from previous failed build
+umount -R "$WORK_DIR/x86_64/airootfs/proc" 2>/dev/null || true
+umount -R "$WORK_DIR/x86_64/airootfs/sys"  2>/dev/null || true
+umount -R "$WORK_DIR/x86_64/airootfs/dev"  2>/dev/null || true
+umount -R "$WORK_DIR/x86_64/airootfs/tmp"  2>/dev/null || true
+umount -R "$WORK_DIR/x86_64/airootfs/run"  2>/dev/null || true
+rm -rf "$WORK_DIR" 2>/dev/null || true
 mkdir -p "$WORK_DIR"
 mkarchiso -v -w "$WORK_DIR" -o "$OUT_DIR" "$SCRIPT_DIR"
 
