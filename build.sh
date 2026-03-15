@@ -30,6 +30,9 @@ chmod +x "$SCRIPT_DIR/airootfs/etc/profile.d/welcome.sh"
 
 echo "[3/3] Running mkarchiso..."
 mkdir -p "$OUT_DIR" "$WORK_DIR"
+# Clean work dir to avoid stale cache issues
+rm -rf "$WORK_DIR"
+mkdir -p "$WORK_DIR"
 mkarchiso -v -w "$WORK_DIR" -o "$OUT_DIR" "$SCRIPT_DIR"
 
 echo ""
