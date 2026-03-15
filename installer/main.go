@@ -462,7 +462,7 @@ func stepPacstrap(m model) error {
 	return run("pacstrap", "-K", "/mnt",
 		"base", "base-devel", "linux", "linux-firmware",
 		"grub", "efibootmgr", "networkmanager", "gnome", "gnome-tweaks",
-		"gnome-shell-extensions", "gdm", "git", "curl", "fastfetch", "neofetch",
+		"gnome-shell-extensions", "gdm", "git", "curl", "fastfetch",
 		"sudo", "nano", "vim", "bash-completion", "noto-fonts", "noto-fonts-emoji",
 		"ttf-jetbrains-mono-nerd", "pipewire", "pipewire-pulse", "wireplumber",
 		"go",

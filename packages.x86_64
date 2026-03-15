@@ -22,7 +22,6 @@ curl
 wget
 go
 fastfetch
-neofetch
 htop
 nano
 vim
