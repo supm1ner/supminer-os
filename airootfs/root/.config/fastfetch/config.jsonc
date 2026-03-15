@@ -1,0 +1,105 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+  "logo": {
+    "type": "small",
+    "source": "~/.config/fastfetch/supminer.txt",
+    "color": {
+      "1": "white",
+      "2": "bright_black"
+    },
+    "padding": {
+      "top": 1,
+      "left": 2
+    }
+  },
+  "display": {
+    "separator": "  ${white}│${reset}  ",
+    "color": {
+      "keys": "white",
+      "title": "white"
+    }
+  },
+  "modules": [
+    {
+      "type": "title",
+      "format": "{user-name}@{host-name}",
+      "color": {
+        "user": "bright_white",
+        "at": "bright_black",
+        "host": "white"
+      }
+    },
+    "separator",
+    {
+      "type": "os",
+      "key": "OS",
+      "keyColor": "white"
+    },
+    {
+      "type": "kernel",
+      "key": "Kernel",
+      "keyColor": "bright_black"
+    },
+    {
+      "type": "uptime",
+      "key": "Uptime",
+      "keyColor": "white"
+    },
+    {
+      "type": "packages",
+      "key": "Packages",
+      "keyColor": "bright_black"
+    },
+    {
+      "type": "shell",
+      "key": "Shell",
+      "keyColor": "white"
+    },
+    {
+      "type": "display",
+      "key": "Resolution",
+      "keyColor": "bright_black"
+    },
+    {
+      "type": "de",
+      "key": "DE",
+      "keyColor": "white"
+    },
+    {
+      "type": "wm",
+      "key": "WM",
+      "keyColor": "bright_black"
+    },
+    {
+      "type": "terminal",
+      "key": "Terminal",
+      "keyColor": "white"
+    },
+    {
+      "type": "cpu",
+      "key": "CPU",
+      "keyColor": "bright_black"
+    },
+    {
+      "type": "gpu",
+      "key": "GPU",
+      "keyColor": "white"
+    },
+    {
+      "type": "memory",
+      "key": "Memory",
+      "keyColor": "bright_black"
+    },
+    {
+      "type": "disk",
+      "key": "Disk",
+      "keyColor": "white"
+    },
+    "break",
+    {
+      "type": "colors",
+      "paddingLeft": 2,
+      "symbol": "block"
+    }
+  ]
+}

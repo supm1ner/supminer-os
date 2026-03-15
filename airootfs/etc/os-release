@@ -1,0 +1,11 @@
+NAME="SupMiner OS"
+PRETTY_NAME="SupMiner OS"
+ID=supminer
+ID_LIKE=arch
+BUILD_ID=rolling
+ANSI_COLOR="0;30"
+HOME_URL="https://github.com/supminer-os"
+DOCUMENTATION_URL="https://github.com/supminer-os/wiki"
+SUPPORT_URL="https://github.com/supminer-os/issues"
+BUG_REPORT_URL="https://github.com/supminer-os/issues"
+LOGO=supminer
