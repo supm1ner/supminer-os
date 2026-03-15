@@ -8,6 +8,12 @@ WORK_DIR="$SCRIPT_DIR/work"
 echo "▓▓▒▒░░ Building SupMiner OS ░░▒▒▓▓"
 echo ""
 
+# Refresh pacman keyring on host to avoid marginal trust errors
+echo "[0/3] Refreshing pacman keyring..."
+pacman-key --init
+pacman-key --populate archlinux
+pacman-key --refresh-keys 2>/dev/null || true
+
 # Build the Go installer first
 echo "[1/3] Building installer..."
 cd "$SCRIPT_DIR/installer"
