@@ -19,8 +19,8 @@ pacman-key --lsign-key E85B8683EB48BC95 2>/dev/null || true
 echo "[1/3] Building installer..."
 cd "$SCRIPT_DIR/installer"
 go mod tidy
-GOOS=linux GOARCH=amd64 go build -ldflags="-s -w" -o "$SCRIPT_DIR/airootfs/usr/local/bin/install" .
-chmod +x "$SCRIPT_DIR/airootfs/usr/local/bin/install"
+GOOS=linux GOARCH=amd64 go build -ldflags="-s -w" -o "$SCRIPT_DIR/airootfs/usr/local/bin/supminer-install" .
+chmod +x "$SCRIPT_DIR/airootfs/usr/local/bin/supminer-install"
 cd "$SCRIPT_DIR"
 
 echo "[2/3] Preparing airootfs..."
